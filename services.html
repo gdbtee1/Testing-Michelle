@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght2400;600;700&display=swap">
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="styles.css"
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="home-body">
+<div>
+  <section id="sec1">
+    <a href="/" class="site-name">Print Pressers LLc
+       </a>
+    <ul>
+      <li><a href="index.html" class="link">Home</a></li>
+      <li><a href="about.html" class="link">About</a></li>
+      <li><a href="services.html" class="link">Services</a></li>
+      <li><a href="contact.html" class="link">Contact</a></li>
+    </ul>
+  </section>
+  <!-- Hero Section -->
+  <section class="services-hero">
+    <div class="hero-container">
+      <h1>Our Services</h1>
+      <p>From custom heat press designs to personalized apparel, we bring your vision to life.</p>
+    </div>
+  </section>
+  <!-- Services Grid -->
+  <section class="services-grid">
+    <div class="service-card">
+      
+      <h2>Custom T-Shirts</h2>
+      <p>Create unique, high-quality t-shirts with your own designs or logos.</p>
+    </div>
+    <div class="service-card">
+    
+      <h2>Custom Hoodies</h2>
+      <p>Cozy hoodies with bold designs, perfect for teams or personal branding.</p>
+    </div>
+    <div class="service-card">
+
+      <h2>Accessories</h2>
+      <p>From hats to tote bags, we press your custom designs on a variety of products.</p>
+    </div>
+    <div class="service-card">
+      
+      <h2>Bulk Orders</h2>
+      <p>Professional services for businesses, events, and large-scale apparel projects.</p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="services-cta">
+    <h2>Ready to bring your design to life?</h2>
+    <a href="contact.html" class="cta-button">Start Your Project</a>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentPage = window.location.pathname.split('/').pop();
+  if (currentPage === '' || currentPage === 'index.html') {
+    currentPage = 'index.html';   // ← change to 'index.html' if needed
+  }
+
+  document.querySelectorAll('.link').forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+  });
+});
+  </script>
+</body>
+</html>

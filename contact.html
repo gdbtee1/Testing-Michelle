@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <section class="contact-hero">
+    <div class="contact-container">
+      <h1>Start Your Project</h1>
+      <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your Name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="Your Email" required>
+        </label>
+
+        <label>
+          Project Details
+          <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+        </label>
+
+        <button type="button" onclick="window.location.href='thank-you.html'">Send Message</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

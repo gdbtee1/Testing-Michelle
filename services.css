@@ -1,0 +1,154 @@
+/* Reset *
+/* Reset */
+body {
+  opacity: 0;
+  animation:fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0.1;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Force nav to hug the top edge */
+#sec1{                       /* or nav, .nav, whatever your navbar wrapper is called */
+  margin: 0 !important;
+  padding: 13px 20px;         /* keep your inner padding, but no outer margin */
+  width: 100%;
+  position: sec1relative;         /* or sticky/absolute if you want it fixed */
+  z-index: 10;
+  background-color: rgba(80, 80, 129, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+/* Kill ul margins completely */
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  margin-right: 200px;        /* keep your offset if you like it */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ---------------- Hero Section ---------------- */
+.services-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #111;
+  background: linear-gradient(180deg, #A0E1D8 0%, #FFD1C1 100%);
+  padding: 60px 20px; /* reduced padding */
+}
+
+.services-hero .hero-container h1 {
+  font-size: 2.5rem; /* slightly smaller for tighter layout */
+  margin-bottom: 10px;
+}
+
+.services-hero .hero-container p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------------- Services Grid ---------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* tighter gap */
+  padding: 40px 20px; /* reduced padding */
+  background-color: #fff;
+}
+
+.service-card {
+  background: #fff5f5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* slightly lighter shadow */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px; /* reduced height */
+  object-fit: cover;
+}
+
+.service-card h2 {
+  margin: 12px 0 8px;
+  color: #111;
+}
+
+.service-card p {
+  padding: 0 12px 15px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ---------------- CTA Section ---------------- */
+.services-cta {
+  text-align: center;
+  padding: 40px 20px; /* reduced padding */
+  background: linear-gradient(180deg, #FFD1C1 0%, #FFCCCC 100%);
+}
+
+.services-cta h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem; /* slightly smaller for tighter layout */
+  color: #111;
+}
+
+.cta-button {
+  padding: 12px 25px;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #f0a500;
+  color: #111;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .services-hero .hero-container h1 {
+    font-size: 2rem;
+  }
+
+  .services-hero .hero-container p {
+    font-size: 1rem;
+  }
+
+  .service-card img {
+    height: 140px;
+  }
+}

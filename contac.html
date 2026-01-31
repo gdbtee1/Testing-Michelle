@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Your Business Name</title>
+  <meta name="description" content="Get in touch with us. We'd love to hear from you and discuss how we can help.">
+  <link rel="stylesheet" href="contac.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<section id="sec1">
+    <a href="/" class="site-name">Print Pressers LLc
+       </a>
+    <ul>
+      <li><a href="index.html" class="link">Home</a></li>
+      <li><a href="about.html" class="link">About</a></li>
+      <li><a href="services.html" class="link">Services</a></li>
+      <li><a href="contact.html" class="link">Contact</a></li>
+    </ul>
+  </section>
+  <div class="container">
+    <header>
+      <h1>Get in Touch</h1>
+      <p class="subtitle">Have a question or ready to start your project? We'd love to hear from you. Drop us a message!</p>
+    </header>
+
+    <div class="contact-wrapper">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="info-item">
+          <h3>Email</h3>
+          <p><a href="mailto:hello@yourbusiness.com">hello@yourbusiness.com</a></p>
+        </div>
+        
+        <div class="info-item">
+          <h3>Phone</h3>
+          <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        </div>
+        
+        <div class="info-item">
+          <h3>Office Hours</h3>
+          <p>Monday – Friday<br>9:00 AM – 6:00 PM EST</p>
+        </div>
+        
+        <div class="info-item">
+          <h3>Location</h3>
+          <p>123 Creative Street<br>Design District, CA 90210</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="form-card">
+        <form id="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="Project inquiry / Question / etc.">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your project or question..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

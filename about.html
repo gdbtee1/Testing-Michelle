@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght2400;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="about-body">
+<div>
+  <section id="sec1">
+    <a href="/" class="site-name">Print Pressers LLc
+       </a>
+    <ul>
+      
+      <li><a href="/" class="link">Home</a></li>
+      <li><a href="about.html" class="link">About</a></li>
+      <li><a href="services.html" class="link">Services</a></li>
+      <li><a href="contact.html" class="link">Contact</a></li>
+    </ul>
+  </section>
+ <div class="star-row">
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+</div>
+    <section id="hero-section" class="hero-sec">
+          <div class="hero-content">
+      <span id="come">
+            <h1>Come Explore<br>Creativity.</h1>
+            <p class="lead">From first sketch to final delivery — thoughtful branding, precise printing, seamless distribution.</p></span>
+            <div class="hero-ctas">
+              <a href="contact.html" class="btn-primary">Start a Project</a>
+              <a href="index.html" class="btn-secondary">See Our Work</a>
+            </div>
+          </div>
+      </section>
+    <section id="who-we-are "class="section who-we-are">
+        <div class="container narrow">
+          <h2 id="text">Who We Are</h2>
+    <div>
+            <div>
+              <p id="founding-belief">Print Pressers LLC was founded with one clear belief: exceptional design deserves equally exceptional execution — and most companies force you to choose one or the other.</p>
+              <p>We refused to accept that compromise.</p>
+            </div>
+            <div>
+              <p id="overview">Today we are a tightly-knit, full-service creative partner based in Royal Oak, Michigan.<br> We design, we print, we finish, we deliver — all under one roof so your project stays consistent, on schedule, and exactly as you envisioned.</p>
+              <p>Small businesses, agencies, startups, and established brands trust us because we treat every job like it’s going on our own shelf.</p>
+            </div>
+          </div>
+      </section>
+    <section class="what-drives-us" class="section drives">
+        <div class="container">
+          <h2>What Drives Us</h2>
+          <div class="cards-grid">
+            <article class="card" id="card-creativity">
+              <h3>Creativity Without Compromise</h3>
+              <p>We start with bold ideas and protect them through every stage — no watering down to fit a budget or machine.</p>
+            </article>
+            <article class="card" id="card-quality">
+              <h3>Obsessive Quality</h3>
+              <p>Color-accurate proofs, precise registration, premium substrates, clean cuts. Every detail is deliberate.</p>
+            </article>
+            <article class="card" id="card-ownership">
+              <h3>End-to-End Ownership</h3>
+              <p>One team handles concept → design → prepress → printing → finishing → fulfillment. Fewer handoffs = fewer mistakes.</p>
+            </article>
+            <article class="card" id="card-transparency">
+              <h3>Transparency & Speed</h3>
+              <p>Realistic timelines, honest communication, proactive updates. You always know where your project stands.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    <section id="cta-section" class="section cta">
+        <div class="container text-center">
+          <h2>Ready to bring your next idea to life?</h2>
+          <p class="lead-sub">Let’s talk — no pressure, just possibilities.</p>
+          <a href="contact.html" class="btn btn-primary btn-large">Get in Touch</a>
+        </div>
+      </section>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentPage = window.location.pathname.split('/').pop();
+  if (currentPage === '' || currentPage === 'index.html') {
+    currentPage = 'index.html';   // ← change to 'index.html' if needed
+  }
+
+  document.querySelectorAll('.link').forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+  });
+});
+document.querySelectorAll("a").forEach(link => {
+  if (link.hostname !== window.location.hostname) return;
+
+  link.addEventListener("click", e => {
+    e.preventDefault();
+
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+      window.location.href = link.href;
+    }, 200);
+  });
+});
+</script>
+</body>
+</html>
+
+    
+
+  
+  

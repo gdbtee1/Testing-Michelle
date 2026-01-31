@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght2400;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="home-body">
+<div>
+  <section id="sec1">
+    <a href="/" class="site-name">Print Pressers LLc
+       </a>
+    <ul>
+      <li><a href="index.html" class="link">Home</a></li>
+      <li><a href="about.html" class="link">About</a></li>
+      <li><a href="services.html" class="link">Services</a></li>
+      <li><a href="contact.html" class="link">Contact</a></li>
+    </ul>
+  </section>
+  <div id="hero">
+  <span id="main">
+  <h2 class="hero1" id="first">We Design You Decide.</h2>
+  </span>
+  <span id="h3">
+  <h3 class="hero1" id="from">From everything to branding,<br> <span id="design">design</span>, <span id="color">creativity</span>, and distribution we handle all your needs.</h3>
+  </span>
+  <div class="bigger" id="portfolio">
+    <a href="#portfolio"class="hero1" id="port"> Here's our Portfolio</a>
+    </div>
+  </div>
+ <div class="star-row">
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+</div>
+  <section id="portfolio-section">
+  <h2 class="portfolio-title">Our Work</h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src=".">
+    </div>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/400x250">
+    </div>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/400x250">
+    </div>
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/400x250">
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <p>&copy; 2026 Your Client Name. All rights reserved.</p>
+  <p>
+    <a href="#">Privacy Policy</a> | 
+    <a href="#">Terms of Service</a>
+  </p>
+</footer>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let currentPage = window.location.pathname.split('/').pop();
+  if (currentPage === '' || currentPage === 'index.html') {
+    currentPage = 'index.html';   // ← change to 'index.html' if needed
+  }
+
+  document.querySelectorAll('.link').forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
+    
+
+  
+  
