@@ -5,9 +5,12 @@
 box-sizing:border-box;
   animation:fadeIn 0.4s ease forwards;
 }
-html{
+html,body{
   scroll-behavior:smooth;
-}
+  /* Fix body background on zoom-out */
+  height: 100%; /* Make sure body and html take up full height */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}gi
 @keyframes fadeIn {
   from{
     opacity: 0.1;
@@ -16,69 +19,65 @@ html{
     opacity:1;
   }
 }
-body{
-  width:100%;
-overflow-x:hidden;
- opacity: 0;
- margin:0;
- padding:0;
- font-family:'Poppins', system-ui, sans-serif;
- line-height:1.5;
- background:beige;
-}
-img, video, iframe{
-  max-width:100%;
-  height:auto;
-  display:block;
-}
-
-/* Force nav to hug the top edge */
-#sec1{                       /* or nav, .nav, whatever your navbar wrapper is called */
-   margin: 0 !important;
-  padding: 13px 20px;         /* keep your inner padding, but no outer margin */
-  width: 100%;/* or sticky/absolute if you want it fixed */
-  z-index: 10;
+#sec1 {
+  display: flex;
+  justify-content: space-between; /* Spacing on desktop */
+  padding: 13px 20px;
   background-color: rgba(80, 80, 129, 0.7);
   backdrop-filter: blur(8px);
+  width: 100%;  /* Ensure it takes full width */
+  box-sizing: border-box;  /* Prevents overflow */
 }
+
 /* Mobile Specific Adjustments */
 @media (max-width: 768px) {
-
-  /* Navigation: Center items vertically and horizontally on mobile */
+  
+  /* Ensure sec1 uses full width */
   #sec1 {
-    align-items: center;  /* Centers vertically only on mobile */
-    justify-content: center; /* Centers the items horizontally */
+    align-items: center;  /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    padding: 13px 20px;  /* Keeps padding consistent */
   }
   
-  /* Adjust navbar links on mobile */
+  /* Adjust ul to center the links horizontally and reduce gap */
   ul {
-    justify-content: center; /* Centers the links horizontally */
-    gap: 20px;  /* Reduce gap between links */
-    margin-right: 0; /* Optional: Remove any margin-right that may have been set */
+    display: flex;
+    justify-content: center;  /* Center links horizontally */
+    gap: 20px;  /* Reduce space between links */
+    margin-right: 0; /* Ensure no extra margin on the right */
+    padding: 0;  /* Reset padding */
   }
 
-  /* Hero Text Adjustments */
+  /* Make sure the navbar links have enough space */
+  .link {
+    font-size: 1.1rem;  /* Adjust font size for mobile */
+  }
+
+  /* Hero Section Adjustments for mobile */
   #hero {
-    min-height: 300px; /* Adjust the height for mobile view */
-    padding-top: 30px; /* Reduce top padding on smaller screens */
+    min-height: 300px;
+    padding-top: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   #hero h2, #hero h3 {
-    font-size: 1.5rem; /* Adjust text size for mobile */
+    font-size: 1.5rem;
   }
 
-  /* Portfolio Grid: Adjust the layout on mobile */
+  /* Portfolio Grid Adjustments for mobile */
   .portfolio-grid {
-    flex-direction: column;  /* Stack portfolio items vertically */
+    flex-direction: column; /* Stack items vertically */
     gap: 20px; /* Reduce space between items */
   }
 
   .portfolio-item {
-    width: 100%; /* Make each portfolio item take up the full width */
+    width: 100%; /* Take full width of container */
     max-width: none; /* Remove the fixed width */
   }
 
-  /* Footer: Stack footer links vertically on mobile */
+  /* Footer links adjustment for mobile */
   .site-footer a {
     display: block;  /* Stack the links vertically */
     margin-bottom: 10px;  /* Add space between footer links */
