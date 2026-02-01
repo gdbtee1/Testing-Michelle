@@ -1,9 +1,13 @@
 /* Reset defaults – put this FIRST */
-body {
-  opacity: 0;
+*{
+  margin: 0;
+  padding: 0;
+box-sizing:border-box;
   animation:fadeIn 0.4s ease forwards;
 }
-
+html{
+  scroll-behavior:smooth;
+}
 @keyframes fadeIn {
   from{
     opacity: 0.1;
@@ -12,22 +16,73 @@ body {
     opacity:1;
   }
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body{
+  width:100%;
+overflow-x:hidden;
+ opacity: 0;
+ margin:0;
+ padding:0;
+ font-family:'Poppins', system-ui, sans-serif;
+ line-height:1.5;
+ background:beige;
+}
+img, video, iframe{
+  max-width:100%;
+  height:auto;
+  display:block;
 }
 
 /* Force nav to hug the top edge */
 #sec1{                       /* or nav, .nav, whatever your navbar wrapper is called */
-  margin: 0 !important;
+   margin: 0 !important;
   padding: 13px 20px;         /* keep your inner padding, but no outer margin */
-  width: 100%;
-  position: sec1relative;         /* or sticky/absolute if you want it fixed */
+  width: 100%;/* or sticky/absolute if you want it fixed */
   z-index: 10;
   background-color: rgba(80, 80, 129, 0.7);
   backdrop-filter: blur(8px);
+}
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+
+  /* Navigation: Center items vertically and horizontally on mobile */
+  #sec1 {
+    align-items: center;  /* Centers vertically only on mobile */
+    justify-content: center; /* Centers the items horizontally */
+  }
+  
+  /* Adjust navbar links on mobile */
+  ul {
+    justify-content: center; /* Centers the links horizontally */
+    gap: 20px;  /* Reduce gap between links */
+    margin-right: 0; /* Optional: Remove any margin-right that may have been set */
+  }
+
+  /* Hero Text Adjustments */
+  #hero {
+    min-height: 300px; /* Adjust the height for mobile view */
+    padding-top: 30px; /* Reduce top padding on smaller screens */
+  }
+
+  #hero h2, #hero h3 {
+    font-size: 1.5rem; /* Adjust text size for mobile */
+  }
+
+  /* Portfolio Grid: Adjust the layout on mobile */
+  .portfolio-grid {
+    flex-direction: column;  /* Stack portfolio items vertically */
+    gap: 20px; /* Reduce space between items */
+  }
+
+  .portfolio-item {
+    width: 100%; /* Make each portfolio item take up the full width */
+    max-width: none; /* Remove the fixed width */
+  }
+
+  /* Footer: Stack footer links vertically on mobile */
+  .site-footer a {
+    display: block;  /* Stack the links vertically */
+    margin-bottom: 10px;  /* Add space between footer links */
+  }
 }
 
 /* Kill ul margins completely */
@@ -78,7 +133,7 @@ backdrop-filter: blur(8px); /* optional frosted glass effect */
   padding:13px;
   border:0;
 }
-sec1,ul{
+#sec1,ul{
   padding:20px 30px;
 }
 body{
@@ -131,7 +186,6 @@ body{
   min-height:300px;
   background-color:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0,6));
   background-image:url("https://wp-stahlsblog.s3.amazonaws.com/wp-content/uploads/performance_background_option2298-1.jpg")
-    width:1
 }
 #hero{
   margin-bottom:0;

@@ -24,10 +24,9 @@ body {
 #sec1{                       /* or nav, .nav, whatever your navbar wrapper is called */
   margin: 0 !important;
   padding: 13px 20px;         /* keep your inner padding, but no outer margin */
-  width: 100%;
-  position: sec1relative;         /* or sticky/absolute if you want it fixed */
+  width: 100%;         /* or sticky/absolute if you want it fixed */
   z-index: 10;
-  background-color: rgba(80, 80, 129, 0.7);
+  background-color:transparent;
   backdrop-filter: blur(8px);
 }
 
